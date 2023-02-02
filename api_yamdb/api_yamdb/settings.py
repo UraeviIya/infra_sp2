@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY', default='secret_key')
 
 
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['*']
 
@@ -86,7 +86,7 @@ TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 USE_L10N = True
-USE_TZ = True
+USE_TZ = os.getenv('USE_TZ')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
